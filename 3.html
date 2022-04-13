@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>You</title>
+    <style>
+  body{
+	  background-color: #000000;
+      perspective: 1600px;
+  }
+  section{
+      position: relative;
+      width: 300px;
+      height: 300px;
+      margin:auto;
+      transform-style: preserve-3d;
+      animation: rotate 20s linear infinite;  
+  }
+  section:hover{
+      animation-play-state: paused;
+  }
+  @keyframes rotate{
+    0%{
+        transform: rotateY(0);
+    }
+    100%{
+        transform: rotateY(360deg);
+    }
+  }
+  section div{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url("01.jpg");
+  }
+  section div:nth-child(1){
+      transform: translateZ(400px);
+  }
+  section div:nth-child(2){
+      transform: rotateY(90deg) translateZ(400px)
+  }
+  section div:nth-child(3){
+      transform: rotateY(180deg) translateZ(400px)
+  }
+  section div:nth-child(4){
+      transform: rotateY(270deg) translateZ(400px)
+  }
+    </style>
+</head>
+<body>
+   <section>
+       <div><img src="Love_files/01.jpg"></div>
+       <div><img src="Love_files/02.jpg"></div>
+       <div><img src="Love_files/03.jpg"></div>
+       <div><img src="Love_files/04.jpg"></div>
+   </section>
+</body>
+</html>
