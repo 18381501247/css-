@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+ 
+        ul,
+        ol {
+            list-style: none;
+        }
+ 
+        #wrapper {
+            width: 500px;
+            height: 500px;
+            margin: 200px auto;
+            background: #ccc;
+        }
+ 
+        #wrapper ul {
+            width: 200px;
+            height: 200px;
+ 
+            transform-origin: center;
+            transform: rotateX(0deg);
+ 
+            transform-style: preserve-3d;
+            /* perspective: 0px; */
+            position: relative;
+            left: 150px;
+            top: 150px;
+            animation: hhl 5s linear infinite;
+ 
+        }
+ 
+        @keyframes hhl {
+            from {
+                transform: rotate3d(1, 0, 1, 0deg);
+            }
+ 
+            to {
+                transform: rotate3d(1, 0, 1, -360deg);
+ 
+            }
+        }
+ 
+        ul>li {
+            width: 200px;
+            line-height: 200px;
+            background: rgba(255, 0, 0, 0.4);
+            transform-origin: center;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            color: white;
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+        }
+        img{
+            display: block;
+            width: 100%;
+        }
+ 
+        ul>li:nth-child(1) {
+            transform: translateY(-100px) rotateX(90deg);
+        }
+ 
+        ul>li:nth-child(2) {
+            background: rgba(0, 255, 0, 0.4);
+            transform: translateY(100px) rotateX(-90deg);
+        }
+ 
+        ul>li:nth-child(3) {
+            background: rgba(0, 0, 255, 0.4);
+            transform: translateX(-100px) rotateY(-90deg);
+        }
+ 
+        ul>li:nth-child(4) {
+            background: rgba(197, 216, 25, 0.4);
+            transform: translateX(100px) rotateY(90deg);
+        }
+ 
+        ul>li:nth-child(5) {
+            background: rgba(250, 3, 3, 0.4);
+            transform: translatez(100px);
+        }
+ 
+        ul>li:nth-child(6) {
+            background: rgba(158, 9, 245, 0.4);
+            transform: translatez(-100px) rotateY(-180deg);
+        }
+ 
+        ul:hover>li {
+            border-radius: 30%;
+        }
+ 
+        /*裂开效果*/
+        ul:hover>li:nth-child(1) {
+            transform: translateY(-200px) rotateX(90deg);
+        }
+ 
+        ul:hover>li:nth-child(2) {
+ 
+            transform: translateY(200px) rotateX(-90deg);
+        }
+ 
+        ul:hover>li:nth-child(3) {
+ 
+            transform: translateX(-200px) rotateY(-90deg);
+        }
+ 
+        ul:hover>li:nth-child(4) {
+ 
+            transform: translateX(200px) rotateY(90deg);
+        }
+ 
+        ul:hover>li:nth-child(5) {
+ 
+            transform: translatez(200px);
+        }
+ 
+        ul:hover>li:nth-child(6) {
+ 
+            transform: translatez(-200px) rotateY(-180deg);
+        }
+    </style>
+</head>
+ 
+<body>
+    <div id="wrapper">
+        <ul> 
+			<li><img src="Love_files/01.jpg" /></li>
+            
+            <li><img src="Love_files/01.jpg" /></li>
+           
+            <li>右</li>
+            <li>前</li>
+            <li>后</li>
+        </ul>
+    </div>
+ 
+</body>
+ 
+</html>
